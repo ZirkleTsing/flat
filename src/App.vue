@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <v-header></v-header>
-    <v-content></v-content>
-    <v-footer></v-footer>
-    <router-view></router-view>
+    <div class="main-wrapper">
+      <v-header></v-header>
+      <v-content></v-content>
+      <v-footer></v-footer>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -21,6 +23,11 @@
   }
 </script>
 
-<style>
-
+<style lang="stylus">
+  .main-wrapper
+    background: #444 url('./assets/banner.jpg')
+    background-attachment: fixed
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
 </style>

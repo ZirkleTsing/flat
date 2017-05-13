@@ -48,7 +48,7 @@
     color: #fff
   nav
     height: 50px
-    background: #333
+    background: rgba(0, 0, 0, 0.4)
   #header-info
     display: inline-block
     box-sizing:border-box
@@ -70,12 +70,12 @@
     letter-spacing: 1px
     color: #fff
   .banner
-    height: 700px
-    background: #444
+    height: 1000px
+    background: rgba(0, 0, 0, 0.4)
     .inner
       margin: 0 auto
       box-sizing: border-box
-      padding-top: 160px
+      padding-top: 300px
       width: 300px
       text-align: center
       letter-spacing: 1px
