@@ -30,4 +30,5 @@
     background-repeat: no-repeat
     background-size: cover
     background-position: center center
+    animation: image-wrapper-opacity 1s linear
 </style>

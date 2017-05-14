@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import 'normalize.css'
 import '../static/reset.css'
+import '../static/animation.css'
 
 Vue.config.productionTip = false
 

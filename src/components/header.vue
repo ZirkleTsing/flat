@@ -6,15 +6,15 @@
           <a id="header-info-address" href="#">常小窝</a>
         </h1>
         <ul id="header-list">
-          <li class="list" v-for="item in navList">
-            <a :href="item.address">{{ item.text }}</a>
+          <li @click="chooseList(index)" class="list" v-for="(item, index) in navList">
+            <a :class="{'active': currentIndex === item.index}" :href="item.address">{{ item.text }}</a>
           </li>
         </ul>
       </nav>
       <div class="banner">
         <div class="inner">
           <h2 id="brand">常小窝</h2>
-          <p id="desc">Lorem ipsum dolor sit amet, consecterur adipisicing elit.</p>
+          <p id="desc">来自未来的阿常</p>
           <button id="banner-button">了解我</button>
           <div class="more">更多</div>
         </div>
@@ -30,13 +30,21 @@
         navList: [
           {
             text: '首页',
-            address: '#'
+            address: '#',
+            index: 0
           },
           {
             text: '导航',
-            address: '#'
+            address: '#',
+            index: 1
           }
-        ]
+        ],
+        currentIndex: 0
+      }
+    },
+    methods: {
+      chooseList (index) {
+        this.currentIndex = index
       }
     }
   }
@@ -58,17 +66,32 @@
     letter-spacing: 1px
     #header-info-address
       color: #fff
+      animation: headerInfo 3s
   #header-list
     display: inline-block
     float: right
     padding: 15px 15px
   .list
+    positon: relative
     display: inline-block
     font-size: 20px
   .list a
-    margin-right: 10px
+    display:block
+    position: relative
+    margin-right: 15px
+    padding: 0 5px 5px 5px
     letter-spacing: 1px
     color: #fff
+    animation: headerInfo 3s
+  .active:after
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0%
+    width: 100%
+    content: ''
+    border-bottom: 3px solid #fff
+    animation: navList .3s linear
   .banner
     height: 1000px
     background: rgba(0, 0, 0, 0.4)
@@ -79,16 +102,48 @@
       width: 300px
       text-align: center
       letter-spacing: 1px
+      p
+        font-weight: 700
+        letter-spacing: 1px
       #brand
+        position: relative
         display: block
         margin-bottom: 20px
         padding: 10px 0px
         font-size: 35px
-        border-top: 3px solid #fff
+ //       border-top: 3px solid #fff
+ //       border-bottom: 3px solid #fff
+      #brand:after
+        display: block
+        position: absolute
+        content: ''
+        bottom: 0
+        left: 15%
+        right: 15%
+        width: 70%
         border-bottom: 3px solid #fff
+        animation: borderShow 1s linear
+      #brand:before
+        display: block
+        position: absolute
+        content: ''
+        top: 0
+        left: 15%
+        right: 15%
+        width: 70%
+        border-top: 3px solid #fff
+        animation: borderShow 1s linear
       #banner-button
         margin-top: 20px
-        width: 200px
+        width: 210px
+        background: transparent
+        border: 3px solid #ff4040
+        letter-spacing: 3px
+        color: #fff
+        transition: background .5s, border-color .5s
+      #banner-button:hover
+        background: #ff4040
+        border: 3px solid #ff4040
       .more
         font-size: 18px
         margin-top: 260px
