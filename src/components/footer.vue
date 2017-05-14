@@ -13,11 +13,10 @@
       </div>
       <div class="bottom">
         <ul class="share-group">
-          <li>item1</li>
-          <li>item2</li>
-          <li>item3</li>
-          <li>item4</li>
-          <li>item5</li>
+          <li><i class="fa fa-github fa-2x fa-fw"></i></li>
+          <li><i class="fa fa-wechat fa-2x fa-fw"></i></li>
+          <li><i class="fa fa-weibo fa-2x fa-fw"></i></li>
+          <li><i class="fa fa-facebook fa-2x fa-fw"></i></li>
         </ul>
         <div class="copy">
           <p>&copy 来自未来的阿常 - 2060.5.12</p>
@@ -72,7 +71,7 @@
           width: 1080px
           li
             display: inline-block
-            padding: 0 10px
+            padding: 0 15px
         .copy
           margin-top: 80px
           p
