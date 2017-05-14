@@ -13,7 +13,7 @@
         <span>pic4</span>
       </div>
     </section>
-    <section class="gray-section">
+    <section id="test2" class="gray-section">
       <div class="gray-wrapper clearfix">
         <div class="section clearfix bg1">
           <div class="img">
@@ -44,7 +44,7 @@
         </div>
       </div>
     </section>
-    <section id="test" class="purple-section">
+    <section id="test1" class="purple-section">
       <div class="purple-wrapper clearfix">
         <div class="header">
           <h2>标题5</h2>

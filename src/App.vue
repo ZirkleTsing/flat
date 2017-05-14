@@ -13,13 +13,15 @@
   import VHeader from './components/header'
   import VFooter from './components/footer'
   import VContent from './components/content'
+  import $ from 'jquery'
 
   export default {
     components: {
-        VHeader,
-        VFooter,
-        VContent
-    }
+      VHeader,
+      VFooter,
+      VContent
+    },
+    mounted () {}
   }
 </script>
 

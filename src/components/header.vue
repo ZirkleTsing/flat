@@ -20,7 +20,7 @@
           <p id="desc">来自2060的阿常</p>
           <button id="banner-button">了解我</button>
           <div class="more">更多</div>
-          <a href="#test"><i class="fa fa-arrow-down fa-3x arrow "></i></a>
+          <a class="arrow" href="#test2"><i class="fa fa-arrow-down fa-3x arrow "></i></a>
         </div>
       </div>
     </div>
@@ -28,6 +28,8 @@
 </template>
 
 <script>
+  import $ from 'jquery'
+
   export default {
     data () {
       return {
@@ -50,6 +52,19 @@
       chooseList (index) {
         this.currentIndex = index
       }
+    },
+    mounted () {
+      $(document).ready(function () {
+        $('a.arrow').click(function () {
+          $('html,body').animate({
+            scrollTop: $($(this).attr('href')).offset().top + 'px'
+          }, {
+            duration: 800,
+            easing: 'swing'
+          })
+          return false
+        })
+      })
     }
   }
 </script>
