@@ -6,6 +6,7 @@ import router from './router'
 import 'normalize.css'
 import '../static/reset.css'
 import '../static/animation.css'
+import './common/font-awesome-4.7.0/css/font-awesome.min.css'
 
 Vue.config.productionTip = false
 

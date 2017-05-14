@@ -44,7 +44,7 @@
         </div>
       </div>
     </section>
-    <section class="purple-section">
+    <section id="test" class="purple-section">
       <div class="purple-wrapper clearfix">
         <div class="header">
           <h2>标题5</h2>

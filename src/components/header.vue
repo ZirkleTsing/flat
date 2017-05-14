@@ -4,19 +4,23 @@
       <nav>
         <h1 id="header-info">
           <a id="header-info-address" href="#">常小窝</a>
+          <i class="fa fa-home fa-fw"></i>
         </h1>
         <ul id="header-list">
           <li @click="chooseList(index)" class="list" v-for="(item, index) in navList">
-            <a :class="{'active': currentIndex === item.index}" :href="item.address">{{ item.text }}</a>
+            <a :class="{'active': currentIndex === item.index}" :href="item.address">{{ item.text }}
+            </a>
+            <i :class="{'fa fa-reorder': index === 1}" class="home"></i>
           </li>
         </ul>
       </nav>
       <div class="banner">
         <div class="inner">
           <h2 id="brand">常小窝</h2>
-          <p id="desc">来自未来的阿常</p>
+          <p id="desc">来自2060的阿常</p>
           <button id="banner-button">了解我</button>
           <div class="more">更多</div>
+          <a href="#test"><i class="fa fa-arrow-down fa-3x arrow "></i></a>
         </div>
       </div>
     </div>
@@ -67,18 +71,27 @@
     #header-info-address
       color: #fff
       animation: headerInfo 3s
+    i
+      transition: opacity .3s linear
+      opacity: 0
+      font-size: 30px
+  #header-info:hover
+    i
+      opacity: 1
+      font-size: 30px
   #header-list
     display: inline-block
     float: right
-    padding: 15px 15px
+    padding: 10px 15px
   .list
     positon: relative
     display: inline-block
-    font-size: 20px
+    margin-right: 12px
+    font-size: 25px
   .list a
-    display:block
+    display:inline-block
     position: relative
-    margin-right: 15px
+    margin-right: 2px
     padding: 0 5px 5px 5px
     letter-spacing: 1px
     color: #fff
@@ -145,6 +158,11 @@
         background: #ff4040
         border: 3px solid #ff4040
       .more
-        font-size: 18px
+        font-size: 30px
+        font-weight: 700
         margin-top: 260px
+      .arrow
+        margin-top: 40px
+        color: #fff
+        animation: arrow 1s infinite alternate
 </style>
