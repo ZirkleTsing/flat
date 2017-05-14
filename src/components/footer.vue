@@ -72,6 +72,11 @@
           li
             display: inline-block
             padding: 0 15px
+            i
+              color: #fff
+              transition: color .3s
+            i:hover
+              color: #333
         .copy
           margin-top: 60px
           p

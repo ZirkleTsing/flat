@@ -24,6 +24,8 @@
         </div>
       </div>
     </div>
+    <audio src="http://link.hhtjim.com/163/28586064.mp3" id="audio1" hidden="true" autoplay="true" loop="true">
+    </audio>
   </header>
 </template>
 

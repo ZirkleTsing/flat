@@ -7,10 +7,9 @@
         <p>Lorem ipsum dolor sit amet, consecterur adipisicing elit.</p>
       </div>
       <div class="img">
-        <span>pic1</span>
-        <span>pic2</span>
-        <span>pic3</span>
-        <span>pic4</span>
+        <i class="fa fa-diamond fa-fw fa-2x icon"></i>
+        <i class="fa fa-star-o fa-fw fa-2x icon"></i>
+        <i class="fa fa-heart fa-fw fa-2x icon"></i>
       </div>
     </section>
     <section id="test2" class="gray-section">
@@ -114,17 +113,19 @@
       margin: 0 auto
       padding-top: 160px
       text-align: center
-      span
+      .icon
         display: inline-block
         margin-right: 50px
-        font-size: 20px
+        font-size: 40px
         line-height: 80px
         width: 80px
         height: 80px
-        background: #333
+        background: transparent
         font-weight: 700
-        border: 1px solid #000
-        transform: rotate(45deg)
+        /*transform: rotate(45deg)*/
+        transition: color .5s
+      .icon:hover
+        color: #ff4040
   .gray-section
     color: #fff
     font-size: 0
