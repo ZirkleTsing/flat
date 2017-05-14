@@ -73,7 +73,7 @@
             display: inline-block
             padding: 0 15px
         .copy
-          margin-top: 80px
+          margin-top: 60px
           p
             letter-spacing: 1px
 </style>
