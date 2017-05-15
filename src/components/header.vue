@@ -19,8 +19,8 @@
           <h2 id="brand">常小窝</h2>
           <p id="desc">来自2060的阿常</p>
           <button id="banner-button">了解我</button>
-          <div class="more">更多</div>
-          <a class="arrow" href="#test2"><i class="fa fa-arrow-down fa-3x arrow "></i></a>
+<!--          <div class="more">更多</div>-->
+          <a class="arrow" href="#overview"><i class="fa fa-arrow-down fa-3x arrow "></i></a>
         </div>
       </div>
     </div>
@@ -177,9 +177,10 @@
       .more
         font-size: 30px
         font-weight: 700
-        margin-top: 260px
+        margin-top: 100px
       .arrow
-        margin-top: 40px
+        display: block
+        margin-top: 140px
         color: #fff
         animation: arrow 1s infinite alternate
 </style>

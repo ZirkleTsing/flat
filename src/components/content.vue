@@ -1,15 +1,16 @@
 <template>
   <div class="content-wrapper">
-    <section class="green-section">
+    <section id="overview" class="green-section">
       <div class="green-wrapper">
-        <h2>标题1</h2>
+        <h2>关于我  <i class="fa fa-heart fa-fw icon"></i></h2>
         <div class="hr"></div>
-        <p>Lorem ipsum dolor sit amet, consecterur adipisicing elit.</p>
-      </div>
-      <div class="img">
-        <i class="fa fa-diamond fa-fw fa-2x icon"></i>
-        <i class="fa fa-star-o fa-fw fa-2x icon"></i>
-        <i class="fa fa-heart fa-fw fa-2x icon"></i>
+        <div class="text">
+          <p>常用昵称阿常先森活跃于各大网站，来自<span class="school">北京工业大学</span>，在读大三本科生</p>
+          <p>90后处女座男青年，爱折腾，喜欢游弋在代码中那种简简单单的感觉</p>
+          <p>相信代码是一种艺术，编程是一种生活态度。</p>
+          <p>前端渣渣一枚，目前为止仍在找寻属于自己的Coding之路</p>
+          <p>Fighting!!!</p>
+        </div>
       </div>
     </section>
     <section id="test2" class="gray-section">
@@ -87,8 +88,8 @@
 
 <style lang="stylus">
   .green-section
-    height: 700px
-    background: #27ecc5
+    height: 1000px
+    background: rgba(0, 0, 0, 0.4)
     color: white
     .green-wrapper
       padding-top: 200px
@@ -100,32 +101,23 @@
         padding-bottom: 20px
         font-weight: 700
         font-size: 30px
+        .icon
+          color: #fff
+          transition: color .5s
+        .icon:hover
+          color: #ff4040
       .hr
         height: 2px
         margin: 0 auto
         width: 55%
         background: #fff
+      .text
+        padding: 10px 230px
       p
         margin-top: 20px
         font-size: 18px
-    .img
-      width: 1080px
-      margin: 0 auto
-      padding-top: 160px
-      text-align: center
-      .icon
-        display: inline-block
-        margin-right: 50px
-        font-size: 40px
-        line-height: 80px
-        width: 80px
-        height: 80px
-        background: transparent
-        font-weight: 700
-        /*transform: rotate(45deg)*/
-        transition: color .5s
-      .icon:hover
-        color: #ff4040
+        .school
+          color: #45D2A2
   .gray-section
     color: #fff
     font-size: 0
