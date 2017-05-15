@@ -18,7 +18,7 @@
         <div class="inner">
           <h2 id="brand">常小窝</h2>
           <p id="desc">来自2060的阿常</p>
-          <button id="banner-button">了解我</button>
+          <button @click="scrolldown" id="banner-button">了解我</button>
 <!--          <div class="more">更多</div>-->
           <a class="arrow" href="#overview"><i class="fa fa-arrow-down fa-3x arrow "></i></a>
         </div>
@@ -53,6 +53,15 @@
     methods: {
       chooseList (index) {
         this.currentIndex = index
+      },
+      scrolldown () {
+        $('html,body').animate({
+          scrollTop: $($('a.arrow').attr('href')).offset().top + 'px'
+        }, {
+          duration: 800,
+          easing: 'swing'
+        })
+        return false
       }
     },
     mounted () {
@@ -71,7 +80,7 @@
   }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
   .header-wrapper
     position: relative
     color: #fff

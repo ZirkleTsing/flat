@@ -5,41 +5,35 @@
         <h2>关于我  <i class="fa fa-heart fa-fw icon"></i></h2>
         <div class="hr"></div>
         <div class="text">
-          <p>常用昵称阿常先森活跃于各大网站，来自<span class="school">北京工业大学</span>，在读大三本科生</p>
+          <p>常用昵称<span class="school">阿常先森</span>活跃于各大网站，来自<span class="school">北京工业大学</span>，在读研一学生</p>
           <p>90后处女座男青年，爱折腾，喜欢游弋在代码中那种简简单单的感觉</p>
           <p>相信代码是一种艺术，编程是一种生活态度。</p>
           <p>前端渣渣一枚，目前为止仍在找寻属于自己的Coding之路</p>
           <p>Fighting!!!</p>
         </div>
+        <a class="arrow" href="#detail"><i class="fa fa-arrow-down fa-3x arrow "></i></a>
       </div>
     </section>
-    <section id="test2" class="gray-section">
+    <section id="detail" class="gray-section">
       <div class="gray-wrapper clearfix">
         <div class="section clearfix bg1">
           <div class="img">
             <img :src="pic1" alt="pic01">
           </div>
           <div class="text">
-            <h2>标题2</h2>
-            <p>Lorem ipsum dolor sit amet, consecterur adipisicing elit.</p>
+            <h2>博客</h2>
+            <p>这是我的博客，很简单的Style</p>
+            <button @click="openBlog" class="blog-button">进入博客</button>
           </div>
         </div>
         <div class="section clearfix bg2">
           <div class="text">
-            <h2>标题3</h2>
-            <p>Lorem ipsum dolor sit amet, consecterur adipisicing elit.</p>
+            <h2>联系我</h2>
+            <p>如果你也是一名极客，欢迎采用以下方式联系我</p>
+            <p>mermantsing@gmail.com</p>
           </div>
           <div class="img">
             <img :src="pic2" alt="pic01">
-          </div>
-        </div>
-        <div class="section clearfix bg3">
-          <div class="img">
-            <img :src="pic3" alt="pic01">
-          </div>
-          <div class="text">
-            <h2>标题4</h2>
-            <p>Lorem ipsum dolor sit amet, consecterur adipisicing elit.</p>
           </div>
         </div>
       </div>
@@ -82,6 +76,11 @@
         pic2: require('../assets/pic02.jpg'),
         pic3: require('../assets/pic03.jpg')
       }
+    },
+    methods: {
+      openBlog () {
+        window.open('http://www.baidu.com')
+      }
     }
   }
 </script>
@@ -101,6 +100,7 @@
         padding-bottom: 20px
         font-weight: 700
         font-size: 30px
+        letter-spacing: 2px
         .icon
           color: #fff
           transition: color .5s
@@ -113,11 +113,16 @@
         background: #fff
       .text
         padding: 10px 230px
-      p
-        margin-top: 20px
-        font-size: 18px
-        .school
-          color: #45D2A2
+        p
+          margin-top: 20px
+          font-size: 18px
+          .school
+            color: #45D2A2
+      .arrow
+        display: block
+        margin-top: 130px
+        color: #fff
+        animation: arrow 1s infinite alternate
   .gray-section
     color: #fff
     font-size: 0
@@ -136,10 +141,23 @@
             padding-left: 5%
             font-size: 30px
             font-weight: 700
+            letter-spacing: 2px
           p
             padding-left: 5%
-            margin-top: 20px
+            margin-top: 30px
             font-size: 18px
+          .blog-button
+            margin-left: 5%
+            margin-top: 30px
+            width: 200px
+            background: transparent
+            border: 3px solid #ff4040
+            letter-spacing: 1px
+            transition: background .5s, border-color .5s
+          .blog-button:hover
+            border: 3px solid #ff4040
+            background: #ff4040
+
       .section > div
         float: left
       .bg1,.bg3
